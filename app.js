@@ -9,7 +9,8 @@ var studentRouter = require('./routes/student');
 var teacherRouter = require('./routes/teacher');
 
 var mongoose = require('mongoose');
-var url ="mongodb+srv://nguyentrung:nntrung382k2@cluster.8b5c38m.mongodb.net/cloud"
+//var url ="mongodb+srv://nguyentrung:nntrung382k2@cluster.8b5c38m.mongodb.net/cloud"
+var url = "mongodb://localhost:27017/greenwich"
 mongoose.connect(url, {useNewUrlParser : true}, err => {
   if(!err) {
     console.log("DB connect success")
@@ -22,6 +23,9 @@ var app = express();
 
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
+
+var cors = require('cors')
+app.use(cors())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
