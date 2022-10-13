@@ -1,0 +1,47 @@
+<form action="/student/add" method="post" class="card p-3 bg-light">
+    <h2 class="text text-primary">Add new student</h2>
+    <div class="form-group">
+        <label class="h6 text-primary">Student Name</label>
+        <input class="form-control" type="text" name="name" required minlength="3" maxlength="30">
+    </div>
+
+    <div class="form-group">
+        <label class="h6 text-primary">Student Email</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label class="h6 text-primary">Student Gender</label>
+        Male<input type="radio" name="gender" value="Male">
+        Female<input type="radio" name="gender" value="Female">
+    </div>
+
+    <div class="form-group">
+        <label class="h6 text-primary">Student Image</label>
+        <input type="text" class="form-control" name="image" required>
+    </div>
+
+    <div class="form-group">
+        <label class="h6 text-primary">Student DoB</label>
+        <input type="date" class="form-control" name="dob">
+    </div>
+
+    <div class="form-group">
+        <label class="h6 text-primary">Student Year</label>
+        <select name = "year" class="form-control">
+            <option value ="">Select a Year</option>
+            <option value ="1">1</option>
+            <option value ="2">2</option> 
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="h6 text-primary">Student Grade</label>
+        <input type="number" class="form-control" name="grade">
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Add">
+    </div>
+</form>
