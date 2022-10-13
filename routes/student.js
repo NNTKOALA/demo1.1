@@ -6,7 +6,19 @@ const router = express.Router()
 router.get('/', (req, res) => {
   StudentModel.find((err, data) => {
     if (!err) {
-      res.send(data)
+      //res.send(data)
+      //render ra trang index ở thư mục views/student
+      res.render('student/index', { sinhvien: data })
+    }
+  })
+})
+
+router.get('/api', (req, res) => {
+  StudentModel.find((err, data) => {
+    if (!err) {
+      //res.send(data)
+      //render ra trang index ở thư mục views/student
+      res.json(data)
     }
   })
 })
